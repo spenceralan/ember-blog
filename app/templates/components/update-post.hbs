@@ -1,0 +1,19 @@
+{{#if updatePostForm}}
+<h4>Update {{post.title}} from {{post.date}}</h4>
+  <div class="form-group">
+    <form>
+      <label for="date">Date</label>
+      {{input class="form-control" value=post.date id="date"}}
+      <label for="title">Title</label>
+      {{input class="form-control" value=post.title id="title"}}
+      <label for="image">Image URL</label>
+      {{input class="form-control" value=post.image id="image"}}
+      <label for="content">Content</label>
+      {{textarea rows="25" class="form-control" value=post.content id="content"}}
+      <br>
+      <button class="btn btn-default" {{action 'update' post}}>Save</button>
+    </form>
+  </div>
+{{else}}
+   <button class="btn btn-default" {{action 'updatePostForm'}}>Update</button>
+{{/if}}

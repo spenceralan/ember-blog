@@ -11,10 +11,20 @@ export default Ember.Route.extend({
      this.transitionTo('index');
    },
 
-   savePost(params) {
-     let newPost = this.store.createRecord("post", params);
-     newPost.save();
-     this.transitionTo("index");
-   }
+   update(post, params) {
+    Object.keys(params).forEach(function(key) {
+      if(params[key]!==undefined) {
+        post.set(key,params[key]);
+      }
+    });
+    post.save();
+    this.transitionTo('index');
+    },
+
+    savePost(params) {
+      let newPost = this.store.createRecord("post", params);
+      newPost.save();
+      this.transitionTo("index");
+    }
   }
 });
