@@ -1,8 +1,9 @@
-
-<p><img src={{post.image}} alt={{post.title}}></p>
 <h1>{{post.title}}</h1>
-<p>{{post.content}}</p>
 <p>{{post.date}}</p>
+<p><img src={{post.image}} alt={{post.title}}></p>
+
+<p>{{post.content}}</p>
+
 <button class="btn btn-default" {{action 'delete' post }}>Delete Post</button>
 <br>
 <br>
