@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "description": "Small description for blog goes here",
+  "main": "",
+  "authors": [
+    "Spencer Alan <spencer.alan@icloud.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
