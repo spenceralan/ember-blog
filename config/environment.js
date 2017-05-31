@@ -1,4 +1,5 @@
 /* eslint-env node */
+var apiKey = require('./../.env').apiKey;
 
 module.exports = function(environment) {
   var ENV = {
@@ -15,6 +16,13 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+    },
+
+    firebase: {
+      apiKey: apiKey,
+      authDomain: 'not-a-blog.firebaseapp.com',
+      databaseURL: 'https://not-a-blog.firebaseio.com',
+      storageBucket: 'not-a-blog.appspot.com'
     },
 
     APP: {
