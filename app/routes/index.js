@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
+    console.log(this.store.findAll('category'));
     return this.store.findAll('post')
   },
 
@@ -10,17 +11,6 @@ export default Ember.Route.extend({
      post.destroyRecord();
      this.transitionTo('index');
    },
-
-   update(post, params) {
-    Object.keys(params).forEach(function(key) {
-      if(params[key]!==undefined) {
-        post.set(key,params[key]);
-      }
-    });
-    post.save();
-    this.transitionTo('index');
-    },
-
     savePost(params) {
       let newPost = this.store.createRecord("post", params);
       newPost.save();

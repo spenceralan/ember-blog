@@ -11,6 +11,13 @@
       <label for="content">Content</label>
       {{textarea rows="25" class="form-control" value=post.content id="content"}}
       <br>
+      <h3> Select a category for your post:</h3>
+      <select class="form-control" id="category">
+        {{#each categories as |category|}}
+          <option value="{{category.id}}">{{category.title}}</option>
+        {{/each}}
+      </select>
+      <br>
       <button class="btn btn-default" {{action 'update' post}}>Save</button>
     </form>
   </div>

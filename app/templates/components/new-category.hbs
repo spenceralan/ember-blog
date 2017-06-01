@@ -1,0 +1,13 @@
+
+<h1>New Category</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=title id="title"}}
+      </div>
+      <button {{action 'saveCategory'}}>Save</button>
+    </form>
+  </div>
+
+{{saveCategory="saveCategory"}}

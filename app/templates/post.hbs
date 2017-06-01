@@ -1,5 +1,4 @@
-<h2>{{model.title}} {{model.date}}</h2>
-
-
-{{update-post post=model update="update"}}
-{{post-detail post=model destroyPost="destroyPost"}}
+{{post-detail post=model.post destroyPost="destroyPost"}}
+{{update-post post=model.post update="update" categories=model.categories}}
+{{category-tile category=model.categories}}
+{{new-category saveCategory="saveCategory"}}

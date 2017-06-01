@@ -3,4 +3,10 @@
 <p><img src={{post.image}} alt={{post.title}}></p>
 <p>{{post.content}}</p>
 
+<h2> Categories </h2>
+
+<ul>
+ <li>{{post.category.title}}</li>
+</ul>
+
 <button class="btn btn-default"{{action 'delete' post}}>Delete</button>
