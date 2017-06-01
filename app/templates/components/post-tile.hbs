@@ -1,6 +1,8 @@
+{{#link-to 'post' post.id}}
 <h1>{{post.title}}</h1>
 <p>{{post.date}}</p>
 <p><img src={{post.image}} alt={{post.title}}></p>
+{{/link-to}}
 
 <p>{{post.content}}</p>
 {{update-post post=post update="update"}}
